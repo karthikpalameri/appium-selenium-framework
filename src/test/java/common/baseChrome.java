@@ -12,7 +12,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class base {
+public class baseChrome {
 
 	public static AndroidDriver<AndroidElement> capabilites() {
 		AndroidDriver<AndroidElement> driver = null;
@@ -20,9 +20,10 @@ public class base {
 
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "testdevice");
-		cap.setCapability(MobileCapabilityType.APP, f.getAbsolutePath());
+//		cap.setCapability(MobileCapabilityType.APP, f.getAbsolutePath());
 //		cap.setCapability("appPackage", "com.android.calculator2");
 //		cap.setCapability("appActivity", "com.android.calculator2.Calculator");
+		cap.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1.0");
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
