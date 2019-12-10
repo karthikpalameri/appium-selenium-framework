@@ -40,13 +40,19 @@ public class HybridAppDemo extends base {
 		}
 
 		driver.findElementByXPath("//*[starts-with(text(),'Hello')]").click();
-		System.out.println("Clicked on Hello");
+		System.out.println("Clicked on Hello link");
 
 		System.out.println("Switching back to nativeapp view");
 		driver.context((String) ch.toArray()[0]);
 
 		driver.navigate().back();
 		System.out.println("clicked on back button ");
+		
+		/*
+		 * difference between ios and android is 
+		 * 1.swipe
+		 * 2.Wheel picker - to select wheel you can send keys
+		 */
 
 	}
 
