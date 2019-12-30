@@ -19,22 +19,13 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 
-public class base {
+public class Base extends GlobalVariablesAndObjects {
 
 	public static AppiumDriverLocalService service;
 
-
-
 	public static AndroidDriver<AndroidElement> capabilites(String appName) throws IOException {
-		AndroidDriver<AndroidElement> driver = null;
-
-		// Properties code
-		FileInputStream is = new FileInputStream(
-				System.getProperty("user.dir") + "/src/test/resources/global.properties");
-		Properties prop = new Properties();
-		prop.load(is);
-		prop.get(appName);
-
+		driver = null;
+		Properties prop = utilities.loadProperty(propFileLocation);
 		File appLoc = new File(System.getProperty("user.dir") + "/src/test/resources/" + prop.get(appName));
 
 		DesiredCapabilities cap = new DesiredCapabilities();
@@ -46,7 +37,7 @@ public class base {
 		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 500000);
 		try {
 			System.out.println("Into creation of android driver..");
-			driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4444/wd/hub"), cap);
+			driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		} catch (MalformedURLException e) {
 			System.out.println("MalformedURL please check URL!");
 			e.printStackTrace();

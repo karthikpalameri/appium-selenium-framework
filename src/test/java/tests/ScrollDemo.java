@@ -9,16 +9,16 @@ import java.util.concurrent.TimeUnit;
 
 import org.testng.annotations.Test;
 
-import driver.base;
+import driver.Base;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import pageObjects.homePage;
 import utilities.Utilities;
 
-public class ScrollDemo extends base {
+public class ScrollDemo extends Base {
 	@Test
 	public void scrollTEst() throws IOException {
-
+		System.out.println("Test 1 start");
 		AndroidDriver<AndroidElement> driver = capabilites("androidTestApp");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -37,9 +37,14 @@ public class ScrollDemo extends base {
 
 		driver.findElementByAndroidUIAutomator("text(\"2. Inline\")").click();
 		System.out.println("Clicked on Inline");
-		
-		//service.stop();
 
+		// service.stop();
+
+	}
+
+	@Test
+	public void test2Demo() {
+		System.out.println("Test 2 start");
 	}
 
 }
