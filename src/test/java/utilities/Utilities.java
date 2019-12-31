@@ -1,6 +1,7 @@
 package utilities;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -21,12 +22,24 @@ public class Utilities {
 				"new UiScrollable(new UiSelector()).scrollIntoView(text(\"" + text + "\"));");
 	}
 
-	public Properties loadProperty(String propFileLocation) throws IOException {
-		// Properties code
-		FileInputStream is = new FileInputStream(
-				System.getProperty("user.dir") + "/src/test/resources/global.properties");
-		Properties prop = new Properties();
-		prop.load(is);
-		return prop;
+	public Properties loadProperty(String propFileLocation) {
+		try {
+			// Properties code
+			FileInputStream is = new FileInputStream(
+					System.getProperty("user.dir") + "/src/test/resources/global.properties");
+			Properties prop = new Properties();
+			prop.load(is);
+			return prop;
+		} catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		return null;
 	}
+	
+	
+	
 }

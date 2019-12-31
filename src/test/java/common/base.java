@@ -6,17 +6,19 @@ import java.net.URL;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import driver.GlobalVariablesAndObjects;
 import io.appium.java_client.*;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class base {
+public class base extends GlobalVariablesAndObjects{
 
 	public static AndroidDriver<AndroidElement> capabilites() {
 		AndroidDriver<AndroidElement> driver = null;
-		File f = new File(System.getProperty("user.dir") + "/src/test/resources/ApiDemos-debug.apk");
+		File f = new File(System.getProperty("user.dir") + "/src/test/resources/"+utilities.loadProperty(propFileLocation));
 
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "testdevice");

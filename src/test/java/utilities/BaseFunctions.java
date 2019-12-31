@@ -1,5 +1,11 @@
 package utilities;
 
-public class BaseFunctions {
+import common.base;
+
+public class BaseFunctions extends base{
+	
+	
+	
+
 
 }

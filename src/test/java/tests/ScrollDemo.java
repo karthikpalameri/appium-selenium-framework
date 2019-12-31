@@ -13,9 +13,10 @@ import driver.Base;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import pageObjects.homePage;
+import utilities.BaseFunctions;
 import utilities.Utilities;
 
-public class ScrollDemo extends Base {
+public class ScrollDemo extends BaseFunctions {
 	@Test
 	public void scrollTEst() throws IOException {
 		System.out.println("Test 1 start");
