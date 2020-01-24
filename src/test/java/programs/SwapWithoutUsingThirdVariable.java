@@ -2,7 +2,7 @@ package programs;
 
 import java.util.Scanner;
 
-public class reverseStringWithoutUsingInbuiltFun3 {
+public class SwapWithoutUsingThirdVariable {
 
 	/*
 	 * 

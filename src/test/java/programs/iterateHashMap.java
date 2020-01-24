@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 
 /**
  * 
- * hm.entrySet() returns Set value like [k=v ,k2=v3] instead of {k=v ,k2=v3} so
+ * hm.entrySet() returns Set value like [k=v ,k2=v2] instead of {k=v ,k2=v3} so
  * that iterator can iterate over the set
  * 
  * Iterator itr = hm.entrySet().iterator(); just add this in the middle to

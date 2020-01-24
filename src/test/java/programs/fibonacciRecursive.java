@@ -1,32 +1,31 @@
 package programs;
 
+import java.util.Scanner;
+
 public class fibonacciRecursive {
 
 	public static void main(String[] args) {
-		// 0,1,1,2,3,5
-		int n1 = 1;
-		int n2 = 1;
-		int x = 6;
 
-		if (x == 1) {
-			System.out.println(n1);
-		} else if (x == 2) {
-			System.out.println(n1 + " " + n2);
+		System.out.print("Enter how many you want");
+		Scanner sc = new Scanner(System.in);
+		int x = sc.nextInt();
 
-		} else {
-			int i = 0;
-			int temp;
-			System.out.println(n1);
-			System.out.println(n2);
-			for (int j = 0; j < x - 2; j++) {
-
-				temp = n1 + n2;
-				System.out.println(temp);
-				n1 = n2;
-				n2 = temp;
-
-			}
+		for (int i = 0; i < x; i++) {
+			System.out.println(fibonacciRecurive(i));
 		}
+	}
+
+	/*
+	 * 0,1,1,2,3
+	 */
+	private static int fibonacciRecurive(int n) {
+		if (n == 0) {
+			return 0;
+		}
+		if (n == 1 || n == 2) {
+			return 1;
+		}
+		return fibonacciRecurive(n - 2) + fibonacciRecurive(n - 1);
 	}
 
 }

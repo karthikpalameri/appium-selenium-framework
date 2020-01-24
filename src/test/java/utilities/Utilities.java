@@ -26,7 +26,7 @@ public class Utilities {
 		try {
 			// Properties code
 			FileInputStream is = new FileInputStream(
-					System.getProperty("user.dir") + "/src/test/resources/global.properties");
+					System.getProperty("user.dir") + propFileLocation);
 			Properties prop = new Properties();
 			prop.load(is);
 			return prop;

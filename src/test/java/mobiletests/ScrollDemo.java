@@ -1,4 +1,4 @@
-package tests;
+package mobiletests;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import driver.Base;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import pageObjects.homePage;
+import mobilePageObjects.homePage;
 import utilities.BaseFunctions;
 import utilities.Utilities;
 
@@ -20,13 +20,12 @@ public class ScrollDemo extends BaseFunctions {
 	@Test
 	public void scrollTEst() throws IOException {
 		System.out.println("Test 1 start");
-		AndroidDriver<AndroidElement> driver = capabilites("androidTestApp");
+		AndroidDriver<AndroidElement> driver = capabilites();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		homePage hp = new homePage(driver);
-		Utilities u = new Utilities(driver);
 
-		u.scrollToText("Views");
+		utilities.scrollToText("Views");
 		// driver.findElementByAndroidUIAutomator("new UiScrollable(new
 		// UiSelector()).scrollIntoView(text(\"Views\"));");
 		hp.views.click();

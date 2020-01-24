@@ -8,7 +8,7 @@ public class FibonacciSeries {
 		int temp;
 		if (limit == 1) {
 			System.out.println(n1);
-		} else if (limit == 1) {
+		} else if (limit == 2) {
 			System.out.println(n1 + " " + n2);
 		} else {
 			System.out.println(n1);

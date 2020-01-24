@@ -1,4 +1,4 @@
-package pageObjects;
+package mobilePageObjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -17,4 +17,6 @@ public class homePage {
 	@AndroidFindBy(uiAutomator = "text(\"Views\")")
 	public WebElement views;	
 
+	
+	
 }
