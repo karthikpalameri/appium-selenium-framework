@@ -61,7 +61,7 @@ public class Base extends GlobalVariablesAndObjects {
 
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+prop.get("chromeDriverPath"));
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--disabled-arguments");// disables extensions
+			//options.addArguments("--disabled-arguments");// disables extensions
 
 			driver = new ChromeDriver(options);
 		} catch (Exception e) {
