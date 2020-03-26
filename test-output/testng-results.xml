@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-24T11:13:36Z" name="Suite" finished-at="2020-01-24T12:39:35Z" duration-ms="5158564">
+  <suite started-at="2020-03-26T12:48:49Z" name="Suite" finished-at="2020-03-26T12:58:01Z" duration-ms="552275">
     <groups>
     </groups>
-    <test started-at="2020-01-24T11:13:36Z" name="DesktopTest" finished-at="2020-01-24T12:39:35Z" duration-ms="5158564">
+    <test started-at="2020-03-26T12:48:49Z" name="DesktopTest" finished-at="2020-03-26T12:58:01Z" duration-ms="552275">
       <class name="commonSteps.commonSteps">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:commonSteps.commonSteps@7139992f]" started-at="2020-01-24T11:13:36Z" name="beforeTest" finished-at="2020-01-24T11:13:36Z" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:commonSteps.commonSteps@79e4c792]" started-at="2020-03-26T12:48:49Z" name="beforeTest" finished-at="2020-03-26T12:48:49Z" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:commonSteps.commonSteps@7139992f]" started-at="2020-01-24T12:39:35Z" name="afterTest" finished-at="2020-01-24T12:39:35Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:commonSteps.commonSteps@79e4c792]" started-at="2020-03-26T12:58:01Z" name="afterTest" finished-at="2020-03-26T12:58:01Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- commonSteps.commonSteps -->
       <class name="desktoptests.TestDemo">
-        <test-method is-config="true" signature="beforeM()[pri:0, instance:desktoptests.TestDemo@69504ae9]" started-at="2020-01-24T11:13:36Z" name="beforeM" finished-at="2020-01-24T11:13:43Z" duration-ms="6196" status="PASS">
+        <test-method is-config="true" signature="beforeM()[pri:0, instance:desktoptests.TestDemo@196a42c3]" started-at="2020-03-26T12:48:49Z" name="beforeM" finished-at="2020-03-26T12:48:54Z" duration-ms="5192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeM -->
-        <test-method signature="check()[pri:0, instance:desktoptests.TestDemo@69504ae9]" started-at="2020-01-24T11:13:43Z" name="check" finished-at="2020-01-24T12:39:34Z" duration-ms="5151111" status="PASS">
+        <test-method signature="fillAll()[pri:0, instance:desktoptests.TestDemo@196a42c3]" started-at="2020-03-26T12:48:54Z" name="fillAll" finished-at="2020-03-26T12:58:01Z" duration-ms="546434" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check -->
-        <test-method is-config="true" signature="afterM()[pri:0, instance:desktoptests.TestDemo@69504ae9]" started-at="2020-01-24T12:39:34Z" name="afterM" finished-at="2020-01-24T12:39:35Z" duration-ms="1232" status="PASS">
+        </test-method> <!-- fillAll -->
+        <test-method is-config="true" signature="afterM()[pri:0, instance:desktoptests.TestDemo@196a42c3]" started-at="2020-03-26T12:58:01Z" name="afterM" finished-at="2020-03-26T12:58:01Z" duration-ms="634" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterM -->

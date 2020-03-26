@@ -123,6 +123,7 @@ public class BaseFunctions extends base {
 	public void switchToFrameId(String id) {
 		try {
 			driver.switchTo().frame(id);
+			System.out.println("Switch to frame id ->" + id);
 		} catch (Exception e) {
 			System.out.println("Failed to switch to frame id ..");
 			e.printStackTrace();
@@ -131,7 +132,7 @@ public class BaseFunctions extends base {
 
 	public void switchToFrameUsingIndex(int index) {
 		try {
-			driver.switchTo().frame((driver.findElements(By.tagName("iframe")).get(index)));
+			driver.switchTo().frame((driver.findElements(By.tagName("iframe")).get(index - 1)));
 		} catch (Exception e) {
 			System.out.println("Failed to switch to frame using inxdex.." + index);
 			e.printStackTrace();
@@ -230,18 +231,20 @@ public class BaseFunctions extends base {
 		}
 
 	}
-	
-	//pending
-	public void switchToPopUpWindow(String beforeClickingWindowHandle) {
+
+	// pending
+	public void switchToPopedUpWindow(String beforeClickingWindowHandle) {
 		try {
-			String currentWindow = beforeClickingWindowHandle;
-			WebDriver popUp = null;
+			String mainWindow = beforeClickingWindowHandle;
+			// WebDriver popUp = null;
 			Set<String> allWindows = driver.getWindowHandles();
 			Iterator<String> itr = allWindows.iterator();
 			while (itr.hasNext()) {
-				popUp = driver.switchTo().window(itr.next());
-				if (!beforeClickingWindowHandle.equals(popUp)) {
-					System.out.println("Switched to popUp window");
+				String ChildWindow = itr.next().toString();
+
+				if (!mainWindow.equals(ChildWindow)) {
+					driver.switchTo().window(ChildWindow);
+					System.out.println("Switched to popUp window. Title is->" + driver.getTitle());
 					break;
 				}
 			}
@@ -291,6 +294,7 @@ public class BaseFunctions extends base {
 		try {
 			Select s = new Select(ele);
 			s.selectByVisibleText(visibleText);
+			System.out.println("Selected " + visibleText + " from the dropdown");
 		} catch (Exception e) {
 			System.out.println("Exception in selecting " + visibleText + " from the dropdown");
 			e.printStackTrace();
@@ -308,12 +312,12 @@ public class BaseFunctions extends base {
 		}
 	}
 
-	public void selectDropDownByIndex(WebElement ele, String value) {
+	public void selectDropDownByIndex(WebElement ele, int index) {
 		try {
 			Select s = new Select(ele);
-			s.selectByValue(value);
+			s.selectByIndex(index);
 		} catch (Exception e) {
-			System.out.println("Exception in selecting  " + value + " st value from the dropdown");
+			System.out.println("Exception in selecting  " + index + " st value from the dropdown");
 			e.printStackTrace();
 		}
 	}

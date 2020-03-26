@@ -5,8 +5,8 @@
     <classes>
       <class name="desktoptests.TestDemo">
         <methods>
-          <include name="check"/>
           <include name="beforeM"/>
+          <include name="fillAll"/>
           <include name="afterM"/>
         </methods>
       </class> <!-- desktoptests.TestDemo -->
